@@ -21,10 +21,8 @@ class MeraDb:
         self.autoDumping = autoDumping
     def load_file(self):
         print ("loading")
-        try:
-            files= open(self.filename, 'r+')
-        except:
-            files= open(self.filename, 'w+')    
+        
+        files= open(self.filename, 'w+')    
         content= files.read()
         if content == "": 
            content= json.dumps({})
